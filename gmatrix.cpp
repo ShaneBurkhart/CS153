@@ -67,9 +67,7 @@ std::ostream& operator<< (std::ostream& out, const GMatrix& gm)
   for(int x = 0 ; x < gm.m_cols ; x ++)
   {
     for(int y = 0 ; y < gm.m_rows ; y ++)
-    {
       out << gm.m_data[x][y] << "\t";
-    }
     out << endl;
   }
   return out;
