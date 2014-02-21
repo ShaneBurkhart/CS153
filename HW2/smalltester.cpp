@@ -1,6 +1,5 @@
 #include <iostream>
 #include "arraylist.h"
-
 using namespace std;
 
 int main () {
@@ -21,7 +20,6 @@ int main () {
   start_grid.insert_back("DonkeyKong");
   start_grid.insert_back("P.Peach");
   start_grid.insert_back("Yoshi");
-
 
   cout << "Starting Grid" << endl;
   cout << start_grid << endl;
