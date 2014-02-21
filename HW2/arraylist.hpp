@@ -18,7 +18,8 @@ template <typename T>
 //                 data deallocated and set to NULL
 ArrayList<T>::~ArrayList()
 {
-  delete [] m_data;
+  if(m_data != NULL)
+    delete [] m_data;
   m_data = NULL;
   m_size = 0;
   m_max = 0;
@@ -221,7 +222,7 @@ void ArrayList<T>::remove(int i)
 {
   if(i >= m_size || i < 0) // Is it in bounds
   {
-    cout << "!-- ERROR : PANIC in ARRAYLIST!! .remove() index not in range" << endl;
+    cout << "!-- ERROR : PANIC in ARRAYLIST!! .remove() index out of range" << endl;
     return;
   }
 
@@ -259,7 +260,7 @@ void ArrayList<T>::swap(int i, int k)
 {
   if(i >= m_size || k >= m_size) // Cant be out of bounds
   {
-    cout << "!-- ERROR : PANIC in ARRAYLIST!! .swap() an index is out of range" << endl;
+    cout << "!-- ERROR : PANIC in ARRAYLIST!! .swap() index out of range" << endl;
     return;
   }
 
