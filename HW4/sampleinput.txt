@@ -1,0 +1,18 @@
+4
+2
+Zapp
+Leela
+10 20
+3
+Dr.Zoidberg
+Mom
+14 28 30 18
+4
+Proff.Fansworth
+Gunter
+18 16 18 20 5
+2
+Fry
+Nibbler
+5 5
+

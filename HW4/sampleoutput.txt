@@ -1,0 +1,11 @@
+#0: From Zapp to Leela 
+$10.00
+#1: From Dr.Zoidberg to Mom 
+$283.98
+#2: From Proff.Fansworth to Gunter
+$1094.92
+#3: From Fry to Nibbler
+$1.25
+
+TOTAL PROFIT = $1390.15
+AVERAGE = $347.54
