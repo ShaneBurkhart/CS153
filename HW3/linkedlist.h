@@ -59,7 +59,7 @@ public:
     // IMPORTANT:: For didactic purposes, the destructor is left empty.
     // YOU are expected to implement function clear() to de-allocate the list
 		// --INLINE
-  ~LinkedList() { clear(); }
+  ~LinkedList() { }
 
     // Purpose: performs a deep copy of the data from rhs into this linked list
     // Parameters: rhs is linked list to be copied

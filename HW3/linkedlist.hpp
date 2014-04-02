@@ -152,8 +152,14 @@ template <typename T>
 // Postconditions: all dynamically allocated memory for nodes deallocated
 void LinkedList<T>::clear()
 {
-  if(m_next != NULL)
-    delete m_next;
+  LinkedList<T>* f = m_next;
+  LinkedList<T>* t;
+  while(f != NULL)
+  {
+    t = f->m_next;
+    delete f;
+    f = t;
+  }
   m_next = NULL;
 }
 
