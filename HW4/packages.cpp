@@ -55,8 +55,8 @@ int main()
   }
 
   cout << endl;
-  cout << "TOTAL PROFIT = " << total_profit << endl;
-  cout << "AVERAGE = " << total_profit / num << endl;
+  cout << "TOTAL PROFIT = $" << total_profit << endl;
+  cout << "AVERAGE = $" << total_profit / num << endl;
 
   // Destroy everyting
   for(int i = 0 ; i < num ; i ++)
