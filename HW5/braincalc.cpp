@@ -22,6 +22,7 @@ int main(){
   file >> input;
 
   while(input != "#"){
+    s.clear();
 
     while(input != "$"){
       is_unary_operator = false;
