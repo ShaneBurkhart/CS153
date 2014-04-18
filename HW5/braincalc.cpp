@@ -1,3 +1,7 @@
+// Programmer: Shane Burkhart
+// HW #: 5
+//
+
 #include "stack.h"
 #include<iostream>
 #include<string>

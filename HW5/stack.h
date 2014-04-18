@@ -1,3 +1,7 @@
+// Programmer: Shane Burkhart
+// HW #: 5
+//
+
 #ifndef STACK_H
 #define STACK_H
 
