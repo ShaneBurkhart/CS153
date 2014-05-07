@@ -1,6 +1,9 @@
+// Programmer: Shane Burkhart
+// HW #: 5
+//
+
 #include "stack.h"
 #include<iostream>
-#include<fstream>
 #include<string>
 #include<cstdlib>
 using namespace std;
@@ -13,13 +16,14 @@ int main(){
   bool is_binary_operator = false;
   bool is_unary_operator = false;
   Stack<int> s;
-  fstream file;
   string input = "";
   int num, n1, n2;
 
-  file.open("sampleinput.txt");
+  cout << "Welcome to brain calc!" << endl;
+  cout << "'$' ends a series of operations.  '#' ends all input." << endl;
+  cout << "Enter some brain format operations:" << endl;
 
-  file >> input;
+  cin >> input;
 
   while(input != "#"){
     s.clear();
@@ -61,7 +65,7 @@ int main(){
         s.push(num);
       }
 
-      file >> input;
+      cin >> input;
     }
 
     int i = 0;
@@ -74,10 +78,7 @@ int main(){
     }
     cout << " ]" << endl;
 
-    file >> input;
+    cin >> input;
   }
-
-
-  file.close();
 
 }
