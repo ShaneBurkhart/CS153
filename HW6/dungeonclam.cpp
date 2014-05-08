@@ -3,9 +3,12 @@
 // CS153 Section A
 // HW6
 //***********************************************//
-
 #include<iostream>
-#include<fstream>
+
+bool is_valid(char** map, int x, int y, int width, int height);
+bool dfs(char** map, int x, int y, int end_x, int end_y, const int width, const int height);
+bool find_path(char** map, int width, int height);
+void print_maze(char** map, int width, int height);
 
 bool is_valid(char** map, int x, int y, int width, int height){
   if(map == NULL) return false;
@@ -86,7 +89,7 @@ void print_maze(char** map, int width, int height){
   /* Print the maze. */
   for(int y = 0; y < height; ++y){
     for(int x = 0; x < width; ++x)
-      std::cout << map[x][y] << " ";
+      std::cout << map[x][y];
     std::cout << std::endl;
   }
 }
@@ -94,36 +97,29 @@ void print_maze(char** map, int width, int height){
 int main(){
   int width = -1;
   int height = -1;
+  int count = 0;
   int start_x = 0, start_y = 0;
   char** maze = NULL;
 
-  // ****************************************//
-  // Read from cin!!!!!!!!!!
-  for(int i = 0; i < 10; ++i)
-    std::cout << "READ FROM CIN!!!!!!!!!" << std::endl;
-  // ****************************************//
-
-  std::fstream file;
-
-  file.open("sampleinput.txt");
-
-  while(width != 0 && height != 0){
-    file >> width;
-    file >> height;
-    std::cout << "Size of maze is " << width << " x " << height << std::endl;
+  while(width != 0 || height != 0){
+    std::cin >> width;
+    std::cin >> height;
 
     if(width == 0 && height == 0) break;
 
-    file.ignore();
+    std::cout << "Map : " << count << std::endl;
+
+    std::cin.ignore();
 
     maze = new char*[width];
     for(int x = 0; x < width; ++x)
       maze[x] = new char[height];
 
+    char dummy;
     for(int y = 0; y < height; ++y){
       for(int x = 0; x < width; ++x)
-        file.get(maze[x][y]);
-      file.ignore();
+        std::cin.get(maze[x][y]);
+      std::cin.get(dummy);
     }
 
     // Won't check if found path since the problem should always have a path.
@@ -136,9 +132,8 @@ int main(){
     delete []maze;
 
     std::cout << std::endl;
+    ++count;
   }
-
-  file.close();
 
   return 0;
 }
