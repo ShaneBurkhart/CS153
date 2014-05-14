@@ -23,6 +23,9 @@ void test1()
   t.insert(13);
   t.insert(10);
 
+  cout << "7: " << t.contains(7) << endl;
+  cout << "10: " << t.contains(10) << endl;
+  cout << "11: " << t.contains(11) << endl;
 
   t.print();
   cout << "Tree empty? " << boolalpha << t.isEmpty() << endl;
@@ -33,7 +36,6 @@ void test1()
 
   return;
 }
-/*
 
 //------------------------------------------------------
 void test2()
@@ -192,7 +194,6 @@ void test6()
 
   return;
 }
-*/
 //------------------------------------------------------
 //------------------------------------------------------
 //------------------------------------------------------
@@ -202,11 +203,11 @@ int main ()
   cout << "Hello Tree Tester!! " << endl;
 
   test1();
-  //test2();
-  //test3();
-  //test4();
-  //test5();
-  //test6();
+  test2();
+  test3();
+  test4();
+  test5();
+  test6();
 
   //cin.ignore();
   //cin.get();

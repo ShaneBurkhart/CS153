@@ -31,9 +31,31 @@ private:
   void recursive_insert(TreeNode<T>** node, const T& x);
   void pretty_print(TreeNode<T>* node, int pad) const;
   void recursive_post_order_print(TreeNode<T>* node) const;
+  void recursive_pre_order_print(TreeNode<T>* node) const;
+  void recursive_clear(TreeNode<T>** node);
+  void recursive_remove(TreeNode<T>*& node, const T& x);
+  TreeNode<T>* clone(const TreeNode<T>* node);
 
 public:
   MyBSTree():m_root(NULL),m_size(0){};
+  MyBSTree(MyBSTree<T>& rhs){
+    m_root = NULL;
+    m_size = 0;
+    *this = rhs;
+  }
+
+  const MyBSTree<T>& operator = (const MyBSTree<T>& rhs){
+    if(&rhs != this)
+    {
+      clear();
+      m_root = clone(rhs.m_root);
+    }
+    return *this;
+  }
+
+  ~MyBSTree(){
+    clear();
+  }
 
   int size() const;
   bool isEmpty() const;
